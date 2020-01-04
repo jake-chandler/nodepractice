@@ -10,7 +10,9 @@ class Logger extends EventEmitter {
   log(message){
     //html requests usually go here
     console.log(message);
-    this.emit('messageLogged', {id: 1, url: 'http://'});  //signaling that an event has happened @param name of event
+    
+    //event emitter is encapsulated in modules
+    this.emit('messageLogged', {id: 1, url: url});  //signaling that an event has happened @param name of event
   }
 }
 
